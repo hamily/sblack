@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 this is a emergency branch
 odfsfddf
 THIS IA THE MASTER FILE a b c d e f g
-=======
 abcdefg
 dfsfddf
 a b c d e f g
->>>>>>> show
 this is my first my git programmer
