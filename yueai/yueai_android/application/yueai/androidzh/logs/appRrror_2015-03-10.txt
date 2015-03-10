@@ -1,0 +1,119 @@
+<?php die();?>
+[2015-03-10 15:20:06] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:35
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [35] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-03-10 15:20:06] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:37
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [37] 行 错误信息为: Undefined index: p 错误号为: [8]
+)
+
+
+
+[2015-03-10 15:20:06] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:91
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: file 错误号为: [8]
+)
+
+
+
+[2015-03-10 15:20:06] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:91
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: line 错误号为: [8]
+)
+
+
+
+[2015-03-10 15:23:58] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:35
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [35] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-03-10 15:23:58] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:37
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [37] 行 错误信息为: Undefined index: p 错误号为: [8]
+)
+
+
+
+[2015-03-10 15:23:58] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:91
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: file 错误号为: [8]
+)
+
+
+
+[2015-03-10 15:23:58] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:91
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: line 错误号为: [8]
+)
+
+
+
+[2015-03-10 15:29:03] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:35
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [35] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-03-10 15:29:03] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:37
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [37] 行 错误信息为: Undefined index: p 错误号为: [8]
+)
+
+
+

@@ -1,0 +1,48 @@
+<?php die();?>
+[2015-03-10 15:19:25] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:91
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 2
+            [message] => define() expects at least 2 parameters, 1 given
+            [file] => D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php
+            [line] => 2
+        )
+
+)
+
+
+
+[2015-03-10 15:20:06] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:91
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 2
+            [message] => filesize(): stat failed for D:\php\wwwroot\yueai\yueai_android\application/yueai/androidzh/logs/appRrror_2015-03-10.txt
+            [file] => D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php
+            [line] => 25
+        )
+
+)
+
+
+
+[2015-03-10 15:23:58] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:91
+:
+Array
+(
+    [0] => fatelerror
+    [1] => 
+)
+
+
+
