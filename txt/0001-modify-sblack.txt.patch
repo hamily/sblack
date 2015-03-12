@@ -1,0 +1,23 @@
+From 390dec345f7a068cbdc0ad7c499d3e512374c7ac Mon Sep 17 00:00:00 2001
+From: sblack <wyjun0317@163.com>
+Date: Wed, 11 Mar 2015 15:36:47 +0800
+Subject: [PATCH] modify sblack.txt
+
+---
+ txt/sblack.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/txt/sblack.txt b/txt/sblack.txt
+index b469bb2..6f6afec 100644
+--- a/txt/sblack.txt
++++ b/txt/sblack.txt
+@@ -1,2 +1,5 @@
+-aooo
++o
++sdfsfsf
++
++ksdfsdfaooo
+ test rest git
+-- 
+1.9.4.msysgit.0
+
