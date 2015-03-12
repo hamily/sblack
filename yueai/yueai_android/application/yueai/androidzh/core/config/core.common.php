@@ -1,7 +1,7 @@
 <?php
-defined('BOYAA') or exit( 'Access Denied！');
+defined('YUEAI') or exit( 'Access Denied！');
 /**
- * 四人鬥地主通用配置文件 以下信息全部為暫設置使用
+ * 通用配置文件 以下信息全部為暫設置使用
  */
 class Core_Common {
 	//主數據庫配置
