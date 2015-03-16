@@ -1,4 +1,6 @@
-abc
+
+masster rebase
+kkkabc
 master modify
 branch m
 abcdefgsblacko
