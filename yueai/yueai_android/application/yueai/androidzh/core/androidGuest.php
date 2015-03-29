@@ -6,5 +6,14 @@ defined('YUEAI') or exit('Access Denied！');
  * @return array()
 **/
 
-$ = trim($_POST['api']);
+$param = json_decode(trim($_POST['api']),true);
+if(empty($param)){
+	
+}
+//auth验证
+if(!Core_Member::factory()->httpauth($param)){
+	
+}
+$api = $param['api'];
+
 ?>

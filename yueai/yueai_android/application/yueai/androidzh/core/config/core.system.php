@@ -6,7 +6,10 @@ defined('YUEAI') or exit('Access Denied！');
 
 class Core_System {
 	
+	//httpmd5加密key
+	public static $httpauth = 'yueaitogether';
 	
-	
+	//sigrequest加密key
+	public static $encryptkey = 'yueai3sf352s';
 }
 ?>
