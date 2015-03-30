@@ -1,0 +1,22 @@
+一，AS与PHP通信公共参数
+web url
+参数：
+api={"api":1,"sid":1,"deviceno":"25cc5eec303fb803370716900d3443cc","username":"user0","mac":"xxx","uid":0,"version":"1.0.0","param":{"imei":"6fbbfd045ce44f13874ecb499d218455"},"sign":"04b29480233f4def5c875875b6bdc3b1","time":1426755868}
+
+传输方式：POST
+参数说明：
+	api:终端类型 1 andoid
+	sid:用户类型 1 游客
+	deviceno:用户设备号md5值 ，用来标识游客帐号 
+	mac:mac地址，标识游客帐号
+	username:用户昵称
+	uid:0
+	version:客户端版本
+	param:额外参数
+	sign:md5验证规则
+	time:请求时间
+	
+	其中sign验证规则：
+	md5(api + sid + version + deviceno + time + secretkey)
+	
+二
