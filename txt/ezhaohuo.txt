@@ -1,0 +1,2 @@
+ezhaohue git address:
+ssh://git@120.27.96.84:22/home/git/dev/ezhaohuo.git
