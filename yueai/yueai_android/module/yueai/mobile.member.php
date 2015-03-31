@@ -1,22 +1,14 @@
 <?php
-! defined ( 'BOYAA' ) and exit ( 'Access Denied!' );
+defined ( 'YUEAI' ) or exit ( 'Access Denied!' );
 
 /**
- * 移动游客登陆核心业务   
- * 经历了ios 版本的不断变迁  勿喷坑了好几代人了 
- * ios6前是靠 deviceno 设备号作为游客登陆标识
- * ios6版本 由于设备号取不到 	换为macid 作为游客登陆标识 
- * 			(注:此macid有2个版本 老macid和macaddress 后面是用macaddress覆盖macid的)
- * ios7版本 由于设备号和macid地址都被屏蔽 换做vendorid作为游客登陆标识
- * 			(注:此时客户端的macid参数会统一的传32字符 有的版本没有)
- * 注:每次变更前都会对下一代唯一标识做收集预埋
- * 请勿随意改动
- * @author HuXiaowei,HarryYi,MikePeng  出门请带刀
+ * 移动端登录操作类   
+ * @author wyj 2015-03-31
  * 
  */
 class Mobile_Member extends Core_Table {
 	/*实例化对象*/
-	protected static $_instance;
+	protected static $_instance = array();
 	/*程序错误日志上报*/
 	const ISOPENLOGS = false;
 	/**  缓存过期天数  **/
@@ -210,55 +202,59 @@ class Mobile_Member extends Core_Table {
 		$result = array();
 		$deviceno = $macid = $sitemid = '';
 		extract($guestandroid);
-		$deviceno = Loader_Mysql::DBMaster()->escape( $deviceno ); //设备号
-		$macid	  = empty( $macid ) ? '' : md5( $macid );		   //macid，Android明文传递,所以需要MD5
+		
+		$deviceno = empty($deviceno) ? '' $deviceno; 		//设备号
+		$macid	  = empty( $macid ) ? '' : $macid;		   	//md5传递
 
 		if(	empty($deviceno)&&empty($macid) ){
-			$this->error_log('android_guest','deviceno or macid not find!',$_REQUEST ['api']);
-			return false;
+			Logs::factory()->debug('emptydevice',$deviceno,$macid);
+			return array();
 		}
-		if( !empty($deviceno) && (strlen($deviceno)==32) ) //设备号存在，则取设备号
+		//设备号存在，则取设备号
+		if( !empty($deviceno) && (strlen($deviceno)==32) ){ 
 			$result = $this->getSitemidByDevice( $deviceno ,self::ANDROIDCLIENTTYPE);
-
-		if( empty($result) ) //取macid来找
+		}
+		//取macid来找
+		if( empty($result) ) {
 			$result = $this->getSitemidByMacid( $macid ,"",self::ANDROIDCLIENTTYPE);
+		}
 		
-		if( empty($result) ){ //都没有找到，则走注册流程
+		//都没有找到，则走注册流程
+		if( empty($result) ){ 
 			
-			$sitemid = Global_ID::factory() -> Global_SITEMID_ID_Generator();
+			$sitemid = Member::factory() ->createSiteMid();
 			
-			if( empty($sitemid)){ //注册失败
-				$this->error_log('android_guest','sitemid create failed!');
+			//注册失败
+			if( empty($sitemid)){ 
+				Logs::factory()->debug('createsitemid','sitemid create failed!');
 				return array ();
 			}	
-			$query_insert = " INSERT INTO {$this->guestandroid}
-											SET sitemid='{$sitemid}', device_no='{$deviceno}',macid='{$macid}'";
-			Loader_Mysql::DBMaster()->query($query_insert);
-			$flag = (int)Loader_Mysql::DBMaster()->affectedRows();
+			//计算crc32
+			$crcdevice = sprintf('%u',crc32($deviceno));
+			$crcmac = sprintf('%u',crc32($macid));
+			$sql = "INSERT INTO {$this->guestandroid} SET sitemid='{$sitemid}', device_no='{$deviceno}',macid='{$macid}' crcdev={$crcdevice},crcmac={$crcmac}";
+			Loader_Mysql::dbmaster()->query($sql);
+			$flag = (int)Loader_Mysql::dbmaster()->affectedRows();
 		
 			if( empty($flag) ){ //注册失败
-				$this->error_log('android_guest','Failed to perform create guest sql!',$query_insert);
+				Logs::factory()->debug('insertdevice','Failed to perform create guest sql!',$sql);
 				return array ();
 			}
 			//注册成功返回信息
-			return array(	
-						'sitemid' =>$sitemid,'device_no'=>$deviceno,'macid'=>$macid,
-					);
+			return array('sitemid' =>$sitemid,'device_no'=>$deviceno,'macid'=>$macid);
 		}
 		//找到了数据，再来看要不要更新
 		$needupdate = $result['macid']!=$macid;
 	
 		if( $needupdate ){ //需要更新
-			$updatequery = " UPDATE {$this->guestandroid}
-									SET macid='{$macid}'
-									WHERE sitemid='{$result['sitemid']}' LIMIT 1 ";	
-					
-			Loader_Mysql::DBMaster()->query($updatequery);
+			$crcmac = sprintf('%u',crc32($macid));
+			$updatequery = "UPDATE {$this->guestandroid} SET macid='{$macid}',crcmac={$crcmac} WHERE sitemid='{$result['sitemid']}' LIMIT 1";						
+			Loader_Mysql::dbmaster()->query($updatequery);
 			
-			if (Loader_Mysql::DBMaster()->affectedRows())
-			{
+			if (Loader_Mysql::dbmaster()->affectedRows()) {
 				$result['macid'] = $macid;
-				empty($this->aCacheKeyType) && $this->setGuestCache(self::ANDROIDCLIENTTYPE, $this->aCacheKeyType['key'], $this->aCacheKeyType['value'], $result);
+				//先不用cache
+				//empty($this->aCacheKeyType) && $this->setGuestCache(self::ANDROIDCLIENTTYPE, $this->aCacheKeyType['key'], $this->aCacheKeyType['value'], $result);
 			}
 		}
 		return is_array($result) ? $result : array();
@@ -270,10 +266,16 @@ class Mobile_Member extends Core_Table {
 	 *@param int    $type     客户端类型1 ios 2 安卓
 	 *@return false|array(sitemid,deviceno,macid,openudid,vendorid,adsid)
 	 */
-	private function getSitemidByDevice( $deviceno ,$type=1)
+	private function getSitemidByDevice( &$deviceno ,$type=1)
 	{
-		if( empty($deviceno)|| strlen($deviceno)!=32 )
+		if( empty($deviceno)|| strlen($deviceno)!=32 ) {
 			return false;
+		}
+		$table = $type==1 ? $this->guestandroid : $this->guestios;
+		$sql = "SELECT * from {$table} WHERE crcdev=" . sprintf('%u',crc32($deviceno))) . " and deviceno='{$deviceno}'";
+		$result = Loader_Mysql::dbmaster()->getOne($sql,MYSQL_ASSOC);
+		return is_array($result) ? $result : array();
+		/*
 			
 		$this->aCacheKeyType = array('key'=>'device_no','value'=>$deviceno);
 		
@@ -293,7 +295,7 @@ class Mobile_Member extends Core_Table {
 			
 			!empty($result) && $this->setGuestCache($type,$this->aCacheKeyType['key'], $this->aCacheKeyType['value'], $result);
 		}
-		
+		*/
 		return is_array($result) ? $result : array();
 	}
 
@@ -305,14 +307,22 @@ class Mobile_Member extends Core_Table {
 	 *@param int    $type           客户端类型1 ios 2 安卓
 	 *@return false|array(sitemid,deviceno,macid,openudid,vendorid,adsid)
 	 */	
-	private function getSitemidByMacid( $macid,$macaddress='',$type=1 )
+	private function getSitemidByMacid( &$macid,$macaddress='',$type=1 )
 	{
-		$macid		= Loader_Mysql::DBMaster()->escape( $macid ); //老的macid
+		if( empty($macid)||strlen($macid)!=32 )
+			return false;
+		
+		$table = $type==1 ? $this->guestandroid : $this->guestios;
+		$sql = "SELECT * from {$table} WHERE crcmac=" . sprintf('%u',crc32($macid))) . " and macid='{$macid}'";
+		$result = Loader_Mysql::dbmaster()->getOne($sql,MYSQL_ASSOC);
+		return is_array($result) ? $result : array();
+		
+		
+		/*$macid		= Loader_Mysql::DBMaster()->escape( $macid ); //老的macid
 		
 		$macaddress = Loader_Mysql::DBMaster()->escape( $macaddress ); //new macid地址
 		
-		if( empty($macid)||strlen($macid)!=32 )
-			return false;
+		
 			
 		$cachetype = '';
 		
@@ -349,7 +359,7 @@ class Mobile_Member extends Core_Table {
 			$this->setGuestCache($type,$this->aCacheKeyType['key'], $this->aCacheKeyType['value'], $result);
 		}	
 			
-		return is_array($result) ? $result : array();
+		return is_array($result) ? $result : array();*/
 	}
 
 	/**

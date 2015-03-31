@@ -19,4 +19,4 @@ api={"api":1,"sid":1,"deviceno":"25cc5eec303fb803370716900d3443cc","username":"u
 	其中sign验证规则：
 	md5(api + sid + version + deviceno + time + secretkey)
 	
-二
+二 登录接口

@@ -4,6 +4,7 @@
  */
 class Member extends Core_Table {
 	protected static $_instance = array();
+	const TRYTIMES = 3;
 	
 	/**
 	 * 返回類的實例對象
@@ -14,6 +15,22 @@ class Member extends Core_Table {
 			self::$_instance['members'] = new Member();
 		}
 		return self::$_instance['members'];
+	}
+	/**
+	 * android游客登录自动产生ID
+	**/
+	public static function createSiteMid(){
+		$time = time();
+		$sitemid = $i = 0;
+		$sql = "INSERT INTO {$this->membersitemid} SET ctime={$time}";
+		while($i<self::TRYTIMES){
+			Loader_Mysql::dbmaster()->query($sql);
+			$sitemid = Loader_Mysql::dbmaster()->insertID();
+			if($sitemid>0){
+				break;
+			}
+		}
+		return intval($sitemid);
 	}
 	/**
      * 根据平台ID与站点ID获取用户信息

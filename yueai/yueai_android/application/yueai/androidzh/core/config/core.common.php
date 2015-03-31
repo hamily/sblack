@@ -5,10 +5,10 @@ defined('YUEAI') or exit( 'Access Denied！');
  */
 class Core_Common {
 	//主數據庫配置
-	public static $dbmaster = array(array('10.171.194.32:3388', 'root', 'together123abc', 'yueai'));
+	public static $dbmaster = array(array('10.171.194.32:8080', 'root', 'together123abc', 'yueai'));
 	
 	//日誌數據庫 未用
-	public static $dbslave = array(array('10.171.194.32:3388', 'root', 'together123abc', 'yueai_log'));
+	public static $dbslave = array(array('10.171.194.32:8080', 'root', 'together123abc', 'yueai_log'));
 	
 	//memcache配置
 	public static $memcache = array(array(array('10.171.194.32', '11211', 100)));	
