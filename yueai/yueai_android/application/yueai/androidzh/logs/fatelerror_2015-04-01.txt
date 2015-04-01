@@ -1,0 +1,127 @@
+<?php die();?>
+[2015-04-01 18:05:07] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 4
+            [message] => syntax error, unexpected '$deviceno' (T_VARIABLE)
+            [file] => D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php
+            [line] => 206
+        )
+
+)
+
+
+
+[2015-04-01 18:34:53] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 4
+            [message] => syntax error, unexpected '$deviceno' (T_VARIABLE)
+            [file] => D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php
+            [line] => 206
+        )
+
+)
+
+
+
+[2015-04-01 18:36:16] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 4
+            [message] => syntax error, unexpected ')'
+            [file] => D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php
+            [line] => 275
+        )
+
+)
+
+
+
+[2015-04-01 18:38:12] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 4
+            [message] => syntax error, unexpected ')'
+            [file] => D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php
+            [line] => 275
+        )
+
+)
+
+
+
+[2015-04-01 18:38:40] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 4
+            [message] => syntax error, unexpected ')'
+            [file] => D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php
+            [line] => 316
+        )
+
+)
+
+
+
+[2015-04-01 18:43:15] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 1
+            [message] => Using $this when not in object context
+            [file] => D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php
+            [line] => 25
+        )
+
+)
+
+
+
+[2015-04-01 18:44:07] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 1
+            [message] => Using $this when not in object context
+            [file] => D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php
+            [line] => 25
+        )
+
+)
+
+
+

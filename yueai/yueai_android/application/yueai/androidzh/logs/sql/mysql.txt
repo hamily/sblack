@@ -1,0 +1,20 @@
+2015-04-01 18:39:19:
+1146:
+msg:Table 'yueai.memberiphone' doesn't existSELECT * from memberiphone WHERE crcdev=845731584 and deviceno='25cc5eec303fb803370716900d3443cc';
+
+2015-04-01 18:42:33:
+1054:
+msg:Unknown column 'macid' in 'where clause'SELECT * from memberdevice WHERE crcmac=3934698447 and macid='140c1f12feeb2c52dfbeb2da6066a73a';
+
+2015-04-01 18:42:35:
+1054:
+msg:Unknown column 'macid' in 'where clause'SELECT * from memberdevice WHERE crcmac=3934698447 and macid='140c1f12feeb2c52dfbeb2da6066a73a';
+
+2015-04-01 18:44:38:
+1064:
+msg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'crcdev=845731584,crcmac=3934698447' at line 1INSERT INTO memberdevice SET sitemid='1', device_no='25cc5eec303fb803370716900d3443cc',macid='140c1f12feeb2c52dfbeb2da6066a73a' crcdev=845731584,crcmac=3934698447;
+
+2015-04-01 18:46:17:
+1064:
+msg:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'crcdev=845731584,crcmac=3934698447' at line 1INSERT INTO memberdevice SET sitemid='2', deviceno='25cc5eec303fb803370716900d3443cc',mac='140c1f12feeb2c52dfbeb2da6066a73a' crcdev=845731584,crcmac=3934698447;
+

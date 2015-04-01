@@ -1,9 +1,8 @@
-<?php !defined('BOYAA') AND exit('Access Denied!');
+<?php 
+defined('YUEAI') or exit('Access Denied!');
 
 /**
  * 移动端专用
- * 斗地主，锄大地
- * iphone， android，ipad
  *
 */
 
@@ -29,11 +28,6 @@ class Lib_Mobile{
 		}
 		if( ! $param = json_decode( $post, true ))
 		{
-			//@Logs::factory()->debug($post,'post_error.txt');
-// 			$ret = array('code'=>'-2',
-// 			             'msg' =>'bad format arguments.');
-			
-// 			self::jsonRet($ret, 0);
 
 			if(!($s = file_get_contents("php://input"))) {		//另外一种途径获取post信息（没有值的话）
 					
@@ -52,8 +46,6 @@ class Lib_Mobile{
 				$_POST[$name] = substr($s, 4);
 			
 				if(!$param = json_decode(substr($s, 4),true)) {			//值不是json格式的话
-					
-					@Logs::factory()->debug($s,'post_error_decode.txt');
 						
 					$ret = array('code'=>'-2','msg' =>'bad format arguments.');
 			
@@ -63,8 +55,6 @@ class Lib_Mobile{
 		
 		return $param;
 	 }
-
-	 
 	/**
 	 * 验证传过来的数据
 	 
@@ -87,7 +77,6 @@ class Lib_Mobile{
 	/**
 	 * 验证
 	 *
-	 * @rebuilder 黄国星
 	 *
 	 * @param array $param
 	 *

@@ -7,7 +7,7 @@ class Core_Table {
 	public $guestandroid = 'memberdevice';
 	
 	//sitemid生成表
-	public $createid = 'membersitemid';
+	public $membersitemid = 'membersitemid';
 	
 	//iphone设备表
 	public $guestios = 'memberiphone';

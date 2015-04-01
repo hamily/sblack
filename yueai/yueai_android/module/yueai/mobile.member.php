@@ -197,13 +197,13 @@ class Mobile_Member extends Core_Table {
 	 * @param string	$aGuest	  游客登陆的组合参数array(deviceno,macid)
 	 * @return array()|array(sitemid,deviceno,macid)
 	 */	
-	public function androidGusetLogin( $guestandroid )
+	public function androidGusetLogin( &$guestandroid )
 	{
 		$result = array();
 		$deviceno = $macid = $sitemid = '';
 		extract($guestandroid);
 		
-		$deviceno = empty($deviceno) ? '' $deviceno; 		//设备号
+		$deviceno = empty($deviceno) ? '' : $deviceno; 		//设备号
 		$macid	  = empty( $macid ) ? '' : $macid;		   	//md5传递
 
 		if(	empty($deviceno)&&empty($macid) ){
@@ -232,7 +232,7 @@ class Mobile_Member extends Core_Table {
 			//计算crc32
 			$crcdevice = sprintf('%u',crc32($deviceno));
 			$crcmac = sprintf('%u',crc32($macid));
-			$sql = "INSERT INTO {$this->guestandroid} SET sitemid='{$sitemid}', device_no='{$deviceno}',macid='{$macid}' crcdev={$crcdevice},crcmac={$crcmac}";
+			$sql = "INSERT INTO {$this->guestandroid} SET sitemid='{$sitemid}', deviceno='{$deviceno}',mac='{$macid}',crcdev={$crcdevice},crcmac={$crcmac}";
 			Loader_Mysql::dbmaster()->query($sql);
 			$flag = (int)Loader_Mysql::dbmaster()->affectedRows();
 		
@@ -241,14 +241,14 @@ class Mobile_Member extends Core_Table {
 				return array ();
 			}
 			//注册成功返回信息
-			return array('sitemid' =>$sitemid,'device_no'=>$deviceno,'macid'=>$macid);
+			return array('sitemid' =>$sitemid,'deviceno'=>$deviceno,'macid'=>$macid);
 		}
 		//找到了数据，再来看要不要更新
-		$needupdate = $result['macid']!=$macid;
+		$needupdate = $result['mac']!=$macid;
 	
 		if( $needupdate ){ //需要更新
 			$crcmac = sprintf('%u',crc32($macid));
-			$updatequery = "UPDATE {$this->guestandroid} SET macid='{$macid}',crcmac={$crcmac} WHERE sitemid='{$result['sitemid']}' LIMIT 1";						
+			$updatequery = "UPDATE {$this->guestandroid} SET mac='{$macid}',crcmac={$crcmac} WHERE sitemid='{$result['sitemid']}' LIMIT 1";						
 			Loader_Mysql::dbmaster()->query($updatequery);
 			
 			if (Loader_Mysql::dbmaster()->affectedRows()) {
@@ -271,8 +271,8 @@ class Mobile_Member extends Core_Table {
 		if( empty($deviceno)|| strlen($deviceno)!=32 ) {
 			return false;
 		}
-		$table = $type==1 ? $this->guestandroid : $this->guestios;
-		$sql = "SELECT * from {$table} WHERE crcdev=" . sprintf('%u',crc32($deviceno))) . " and deviceno='{$deviceno}'";
+		$table = $type==2 ? $this->guestandroid : $this->guestios;
+		$sql = "SELECT sitemid,deviceno,mac from {$table} WHERE crcdev=" . sprintf('%u',crc32($deviceno)) . " and deviceno='{$deviceno}'";
 		$result = Loader_Mysql::dbmaster()->getOne($sql,MYSQL_ASSOC);
 		return is_array($result) ? $result : array();
 		/*
@@ -312,8 +312,8 @@ class Mobile_Member extends Core_Table {
 		if( empty($macid)||strlen($macid)!=32 )
 			return false;
 		
-		$table = $type==1 ? $this->guestandroid : $this->guestios;
-		$sql = "SELECT * from {$table} WHERE crcmac=" . sprintf('%u',crc32($macid))) . " and macid='{$macid}'";
+		$table = $type==2 ? $this->guestandroid : $this->guestios;
+		$sql = "SELECT sitemid,deviceno,mac from {$table} WHERE crcmac=" . sprintf('%u',crc32($macid)) . " and mac='{$macid}'";
 		$result = Loader_Mysql::dbmaster()->getOne($sql,MYSQL_ASSOC);
 		return is_array($result) ? $result : array();
 		

@@ -7,6 +7,7 @@ require_once('config.yueai.php');
 
 header ("Cache-Control: no-cache, must-revalidate");
 header ("Pragma: no-cache"); 
+error_reporting(E_ALL ^ E_NOTICE);
 
 ob_start('ob_gzhandler');
 date_default_timezone_set(DEFAULT_TIMEZONE); //设置时区

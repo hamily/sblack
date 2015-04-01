@@ -19,7 +19,7 @@ class Member extends Core_Table {
 	/**
 	 * android游客登录自动产生ID
 	**/
-	public static function createSiteMid(){
+	public function createSiteMid(){
 		$time = time();
 		$sitemid = $i = 0;
 		$sql = "INSERT INTO {$this->membersitemid} SET ctime={$time}";
