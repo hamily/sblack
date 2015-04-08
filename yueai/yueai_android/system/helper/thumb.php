@@ -1,4 +1,5 @@
-<?php !defined('BOYAA') AND exit('Access Denied!');
+<?php 
+defined('YUEAI') OR exit('Access Denied!');
 
 class Thumb{
 

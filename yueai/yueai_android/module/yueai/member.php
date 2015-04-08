@@ -1,4 +1,5 @@
 <?php
+defined('YUEAI') or exit('Access Denied！');
 /**
  * 用戶資料處理類
  */
@@ -41,10 +42,10 @@ class Member extends Core_Table {
      *
      * @return array 
      */
-    public function getOneBySitemid($sitemid, $sid=100, $inCache=false)
+    public function getOneBySitemid($sitemid, $sid=1, $inCache=false)
     {           
-        $sid     = Helper::uint($sid);    
-        $sitemid = Loader_Mysql::dbmaster()->escape($sitemid);
+        $sid     = Helper::uint( $sid);    
+        $sitemid = Helper::uint( $sitemid);
         if(!$sitemid || !$sid){ 
             return array();
         }
@@ -52,35 +53,32 @@ class Member extends Core_Table {
         $mid = 0;
         
         $cacheKey = Core_Keys::getOneBySitemid($sitemid, $sid);
-        //fb平台用memcache保存mid
+        //保存mid
         $mid = (int)Loader_Memcached::stocache()->get($cacheKey);
         if( !$mid )
         {
-            $where = ($sid == 100 ? " AND sid>=100 " : " AND sid=$sid ");
             
-            $query = " SELECT mid FROM $this->members WHERE sitemid='$sitemid' $where LIMIT 1 " ;
+            $query = " SELECT mid FROM {$this->memberinfo} WHERE sitemid='{$sitemid}' AND sid={$sid} LIMIT 1 " ;
                        
             $result = Loader_Mysql::dbmaster()->getOne($query, MYSQL_ASSOC);
 			
             $mid = isset($result['mid']) ? (int)$result['mid'] : 0;
             
-            $mid && Loader_Memcached::stocache()->set( $cacheKey, $mid, 30*24*60*60);
+            $mid && Loader_Memcached::stocache()->set( $cacheKey, $mid, 3*24*3600);
             
         }
         return $mid ? $this->getOneById($mid,$inCache) : array();
     }
-/**
+	/**
      * 根据用户的游戏ID获取用户信息
      *
      * @param {int}  $mid      用户游戏ID
-     * @param {bool} $inCache  是否取出金币，经验等信息
      *
      * @return array
      */
     public function getOneById($mid, $inCache=TRUE)
     {
-        if(! $mid = Helper::uint($mid))
-        {
+        if(! $mid = Helper::uint($mid)){
             return array();
         }
         $cacheKey = Core_Keys::getOneById($mid);
@@ -89,47 +87,23 @@ class Member extends Core_Table {
         
         //缓存中不存在
         if($userInfo['mid'] != $mid) {
-        	$sql = "SELECT *,a.mid FROM $this->members a LEFT JOIN $this->memberfield b ON a.mid=b.mid WHERE a.mid=".$mid." LIMIT 1";			
+			$sql = "SELECT * FROM {$this->memberinfo} WHERE mid={$mid} LIMIT 1";
             $userInfo = Loader_Mysql::dbmaster()->getOne($sql, MYSQL_ASSOC);
             //设置缓存
-            $userInfo['mid'] == $mid && Loader_Memcached::minfo($mid)->set($cacheKey, Values::combine(Values::getmb(), $userInfo), 10*24*3600);
+            $userInfo['mid'] == $mid && Loader_Memcached::minfo($mid)->set($cacheKey, Values::combine(Values::getmb(), $userInfo), 3*24*3600);
         }
         //如果要取出金币，经验等信息
         if( $inCache)
         {
-        	$aSave = $this->getUserMpSave( $mid);      	
-            if( !empty( $aSave)){
-            	$userInfo = array_merge($userInfo, $aSave);
-            	$userInfo['mid'] == $mid && Loader_Memcached::minfo($mid)->set($cacheKey, Values::combine(Values::getmb(), $userInfo), 10*24*3600);
-            }
+        	
         } 
         if($userInfo['mid']==$mid){
         	 //頭像個人地址等信息
-	       //if($userInfo['sid']==13){	//FB平台 一定要限制，不然移動端這裡會出錯，除非移去端這個類裡面也有這個函數
-	        $aIcon = Core_Member::factory()->getIcon($userInfo['sitemid'],$userInfo['sid'],$userInfo['unid'],$userInfo['sex'],$mid);
+	        $aIcon = Core_Member::factory()->getIcon($mid);
 	        $userInfo = array_merge($userInfo, $aIcon);	//合並數組
-	        
-	        
-	        $aKinfo = $this->getkinginfo( $mid);	//获得king queen people slave
-	        $userInfo = array_merge($userInfo, $aKinfo);
-	       //}
         }
        
         return $userInfo['mid'] == $mid ? $userInfo : array();
-    }
-    /**
-     * 获取用户金币，经验，等级等信息
-     * @param $mid 用户mid
-     */
-    public function getUserMpSave( $mid){
-    	if( !( $mid = Helper::uint( $mid))){
-    		return array();
-    	}
-    	//可以考虑用缓存储，但是存在服务器从数据库直接修改玩家金币的情况
-    	$sql = "SELECT mid,IFNULL(money,0) AS money,IFNULL(exp,0) AS exp,level,IFNULL(wintimes,0) AS wintimes,IFNULL(losetimes,0) AS losetimes,IFNULL(bccoins,0) AS bccoins FROM $this->memberinfo WHERE mid=".$mid." LIMIT 1";
-    	Loader_Mysql::dbmaster()->close();
-    	$aInfo = Loader_Mysql::dbmaster()->getOne( $sql, MYSQL_ASSOC);
-    	return empty($aInfo) ? array() : $aInfo;
     }
     /**
      * 新用户注册
@@ -138,90 +112,57 @@ class Member extends Core_Table {
      *
      * @return array 返回用户游戏ID
      */
-    public function insert($userInfo)
-    {
+    public function insert( &$userInfo) {
 	    if(empty($userInfo)) {
 		    return array();
 		}
-		Logs::factory()->debug('registerinfo',$userInfo);
+		
         $time = time();
-        $userDetail['sitemid']  = Loader_Mysql::dbmaster()->escape($userInfo['sitemid']);	//平台用户ID
-        $userDetail['mnick']    = Loader_Mysql::dbmaster()->escape($userInfo['name']);		//用户昵称
-        $userDetail['name']     = Loader_Mysql::dbmaster()->escape($userInfo['username']);		//用户姓名
+        $userDetail['sitemid']  = $userInfo['sitemid'];	//平台用户ID
+        $userDetail['mnick']    = $userInfo['mnick'];		//用户昵称
         $userDetail['sid']      = isset($userInfo['sid']) ? Helper::uint($userInfo['sid']) : PLATFORM_ID;							//站点SID
+        $userDetail['sex']      = Core_Member::factory()->getGender($userInfo['gender']);
         
-        $userDetail['unid']     = Helper::uint($userInfo['unid']);							//地区ID
-        $userDetail['muchid']   = Helper::uint($userInfo['muchid']);        
-        
-        $userDetail['exp']      = 0;
-        $userDetail['level']    = 1;
-        $userDetail['money']    = 0;
-        
-        $userDetail['icon']     = '';//Loader_Mysql::dbmaster()->escape($userInfo['icon']);
-        $userDetail['middle']   = '';//Loader_Mysql::dbmaster()->escape($userInfo['middle']);
-        $userDetail['big']      = '';//Loader_Mysql::dbmaster()->escape($userInfo['big']);
-        
-        $userDetail['profile']  = Loader_Mysql::dbmaster()->escape($userInfo['profile']);
-        $location = isset($userInfo['location']['name']) ? addslashes($userInfo['location']['name']) : addslashes($userInfo['location']);
-        $userDetail['location'] = iconv('GB2312','UTF-8',$location);
-        $hometown = isset($userInfo['hometown']['name']) ? addslashes($userInfo['hometown']['name']) : addslashes($userInfo['hometown']);
-        $userDetail['hometown'] = iconv('GB2312','UTF-8',$hometown);
-        
-        $userDetail['sex']         = Core_Member::factory()->getGender($userInfo['gender']);//Helper::uint($userInfo['sex']);
-        $userDetail['mtime']       = $time;
-        $userDetail['mstatus']	= 10;	//用户默认状态
-        $userDetail['mentercount'] = 0;
-        $userDetail['mcommend']  = Helper::uint($userInfo['ivitermid']);
-        $userDetail['muchid']  = Helper::uint($userInfo['muchid']);
-        
+		$userDetail['locate']   = 0;	//居住地,到省
+		$userDetail['birth']    = 0;	//出生年月日
+		$userDetail['star']    	= 0;	//星座
+		$userDetail['weight']   = isset($userInfo['weight']) ? max(1,$userInfo['weight']) : mt_rand(40,60);	//休重
+		$userDetail['blood']    = 0;	//血型
+		$userDetail['perfession']    = 0;	//职业
+		$userDetail['house']    = 0;	//是否有房
+		$userDetail['car']    	= 0;	//是否有车
+		$userDetail['marry']    = 0;	//是否结婚
+		$userDetail['money']    = 0;	//收入
+		$userDetail['bsex']    	= 0;	//是否接受婚前性行为
+		$userDetail['bother']   = 0;	//是否接收异域地恋
+		$userDetail['bstay']    = 0;	//是否接受遇父母同住
+		$userDetail['bchild']   = 1;	//是否想要小孩
+		$userDetail['interst']  = 0;	//兴趣受好
+		$userDetail['part']     = 0;	//魅力部位
+		$userDetail['status']   = 0;	//用户状态
+		$userDetail['mactivetime']  = $time;	//上次登录时间 注册是为注册时间
+		$userDetail['mtime']    = $time;
+        $userDetail['mentercount']    = 0;
+		
         extract($userDetail);
         //插入landlord_members
-        $query = "INSERT INTO $this->members SET sitemid='{$sitemid}',mnick='{$mnick}',name='{$name}',sid=$sid,icon='{$icon}',middle='{$middle}',big='{$big}',mstatus={$mstatus},mactivetime={$time},mentercount={$mentercount} ON DUPLICATE KEY UPDATE mentercount=mentercount + 1";
+        $query = "INSERT INTO {$this->memberinfo} SET sitemid='{$sitemid}',mnick='{$mnick}',sid={$sid},status={$status},mactivetime={$time},mentercount={$mentercount} ON DUPLICATE KEY UPDATE mentercount=mentercount + 1";
         Loader_Mysql::dbmaster()->query( $query);
         $mid = $userDetail['mid'] = Loader_Mysql::dbmaster()->insertID();
         if($mid){
-        	//插入landlord_memberfield
-        	$sql = "INSERT IGNORE INTO $this->memberfield SET mid=$mid,sex=$sex,location='{$location}',hometown='{$hometown}',mcommend=$mcommend,mtime=$mtime,muchid=$muchid";
-        	Loader_Mysql::dbmaster()->query( $sql);
         	
-        	//初始化用户金币等信息便于下面添加金币操作
-        	$sqlcoin = "INSERT IGNORE INTO $this->memberinfo SET mid=$mid,level=1";
-        	Loader_Mysql::dbmaster()->query($sqlcoin);
-        	
-        	unset($query, $sql, $sqlcoin);
-        	
-        	//用户注册赠送金币
-        	$chips = Core_Coin::$chips;
-        	$firstin = Helper::uint($chips['firstin']);
-        	$afield = array(array(0,0,$firstin));
-        	$aRet = $this->addCoin($mid, 1, $afield);
-        	
-        	if($aRet['mid']==$mid){
-        		$userDetail['money'] = $firstin;
-        	} else {
-        		return array();
-        	}
+        	unset($query);
+			
         	//设置用户信息缓存
         	$cacheKey = Core_Keys::getOneById( $mid);
-        	Loader_Memcached::minfo($mid)->set($cacheKey, Values::combine(Values::getmb(), $userDetail), 10*24*3600);
-        	
+        	Loader_Memcached::minfo($mid)->set($cacheKey, Values::combine(Values::getmb(), $userDetail), 3*24*3600);
+			
         	return $userDetail;
         } else {
         	return array();
         }        
     }
-    /**
-     * 检查用户是否自己操作
-     * @param $mid
-     * @return bool(true/false)
-     */
-    public static function isUserSelf($mid) {
-        $userInfo = Helper::getCookie('userInfo');
-        if(!empty($userInfo)){	//避免某些取不到cookie
-        	return ($userInfo['mid']!=$mid) ? false : true;	
-        }
-        return true;        
-    }
+    
     /**
 	 * 用户金币操作
 	 * @param $mid 用户mid
@@ -368,7 +309,6 @@ class Member extends Core_Table {
 		if(! $mid = Helper::uint( $mid)){
 			return false;
 		}
-		$flag = false;
 		$today = strtotime('today');
 		$now = time();
 		$update = "";
@@ -379,72 +319,49 @@ class Member extends Core_Table {
 		} else {
 			$userinfo['firstLogin']	= 0;
 		}
-		if($userinfo['vip']>=1 && $now>$userinfo['viptime']){	//VIP过期
-			$update .= ",vip=0,viptime=0";
-			$vip = 0;
-			$viptime = 0;
-		}
-		if($userinfo['club']==1 && $now>$userinfo['clubtime']){	//表情包過期
-			$update .= ",club=0,clubtime=0";
-			$club = 0;
-			$clubtime = 0;
-		}
-		if($now>$userinfo['facetime']){	//表情包过期
-			$update .= ",facetime=0";
-			$facetime = 0;
-		}
+		
 		if($update){
 			$update = substr($update,1);
-		
 			//有别的字段需要更新再加
-			$sql = "UPDATE $this->members SET {$update} where mid=$mid LIMIT 1";
+			$sql = "UPDATE {$this->memberinfo} SET {$update} where mid={$mid} LIMIT 1";
 			Loader_Mysql::dbmaster()->query( $sql);
 			if(Loader_Mysql::dbmaster()->affectedRows()){
 				//更新 cache
 				$aUser = $this->getOneById($mid,false);
 				$aUser['mactivetime'] = $now;
-				$aUser['vip'] = isset($vip) ? $vip : $userinfo['vip'];
-				$aUser['viptime'] = isset($viptime) ? $viptime : $userinfo['viptime'];
-				$aUser['club']  = isset($clubtime) ? $club : $userinfo['club'];
-				$aUser['clubtime']  = isset($clubtime) ? $clubtime : $userinfo['clubtime'];
-				$aUser['facetime']  = isset($facetime) ? $facetime : $userinfo['facetime'];
 				if($userinfo['firstLogin']==1){
 					$aUser['mentercount'] = $userinfo['mentercount'] + 1;	
-				}				
+				}
+				if(empty($aUser['mnick'])){
+					$aUser['mnick'] = $userinfo['mnick'];
+				}
 				$cacheKey = Core_Keys::getOneById($mid);
-				$flag = Loader_Memcached::minfo($mid)->set($cacheKey, Values::combine(Values::getmb(), $aUser), 10*24*3600);
-			} else {
-				$flag = false;
-			}
+				return Loader_Memcached::minfo($mid)->set($cacheKey, Values::combine(Values::getmb(), $aUser), 3*24*3600);
+			} 
 		}
-		return $flag;
+		
 	}
 	/**
 	 * 设置一条在线信息
 	 *
 	 * @param {array} $userinfo
-	 * @param $bid 統計中心ID
+	 * @param $api 統計中心ID
 	 * @return void
 	 */
-    public function setOnline(&$userinfo, $bid='')
+    public function setOnline(&$userinfo, $api=1)
     {
         $time = time();
-        $userinfo['mtkey'] = md5($time . $userinfo['mid'] . '$#@!^');
+        $userinfo['mtkey'] = md5($time . $userinfo['mid'] . 'yueai%&');
         
 		$query = " INSERT INTO {$this->membertable} 
 		           SET mtkey  = '{$userinfo['mtkey']}',
 				       mid    = '{$userinfo['mid']}', 
-					   mttime = '{$time}',
-					   bid	  = '{$bid}'  
+					   mttime = '{$time}' 
 				   ON DUPLICATE KEY 
 				   UPDATE mtkey  = '{$userinfo['mtkey']}', 
-				          mttime = '{$time}',bid='{$bid}' ";
+				          mttime = '{$time}',api={$api}";
         Loader_Mysql::dbmaster()->query( $query);
         
-        /*
-        $query = "INSERT INTO $this->memberactivetime SET mid={$userinfo['mid']},mttime=$time,bid='{$bid}' ON DUPLICATE KEY UPDATE mttime=$time,bid='{$bid}'";
-        Loader_Mysql::dbmaster()->query( $query);
-        */
 		$query = " SELECT mtkey, 
 		                  tid, 
 						  svid, 
@@ -455,8 +372,6 @@ class Member extends Core_Table {
         $aInfo = Loader_Mysql::dbmaster()->getOne( $query, MYSQL_ASSOC);
 
         $userinfo['mtkey']    = $aInfo['mtkey'];
-		$userinfo['tid']      = (int)$aInfo['tid'];
-        $userinfo['svid']     = (int)$aInfo['svid'];
         $userinfo['mtstatus'] = (int)$aInfo['mtstatus'];
     }
     
@@ -711,28 +626,6 @@ class Member extends Core_Table {
 			//重置userinfo里的level
 			$aUser['level'] = $grade;
 		}
-	}
-	/**
-	 * 获得玩家king queen people slave胜负数量
-	 *
-	 * @param unknown_type $mid
-	 */
-	public function getkinginfo($mid){
-		if(!$mid=Helper::uint( $mid)){
-			return array();
-		}
-		$cachekey = Core_Keys::mkkqpsnum( $mid);
-		$kinfo = Loader_Memcached::minfo( $mid)->get($cachekey);
-		$kinfo = is_array($kinfo) ? Values::uncombine(values::getWin(), $kinfo) : array();
-		if($kinfo['mid']!=$mid){	//缓存中不存在
-			$sql = "SELECT mid,king,queen,people,slave FROM {$this->memkingslave} WHERE mid={$mid} LIMIT 1";
-			$kinfo = Loader_Mysql::dbslave()->getOne( $sql, MYSQL_ASSOC);
-			if(empty($kinfo)){
-				$kinfo = array("mid"=>$mid,"king"=>0,"queen"=>0,"people"=>0,"slave"=>0);
-			}
-			Loader_Memcached::minfo( $mid)->set($cachekey,Values::combine(Values::getWin(),$kinfo),1800);
-		}
-		return $kinfo['mid']==$mid ? $kinfo : array();
 	}
 }
 ?>

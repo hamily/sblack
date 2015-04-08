@@ -1,0 +1,163 @@
+<?php die();?>
+[2015-04-07 17:11:09] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 64
+            [message] => Call-time pass-by-reference has been removed
+            [file] => D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php
+            [line] => 61
+        )
+
+)
+
+
+
+[2015-04-07 17:11:31] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 64
+            [message] => Call-time pass-by-reference has been removed
+            [file] => D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php
+            [line] => 62
+        )
+
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 64
+            [message] => Call-time pass-by-reference has been removed
+            [file] => D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php
+            [line] => 62
+        )
+
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 64
+            [message] => Call-time pass-by-reference has been removed
+            [file] => D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php
+            [line] => 62
+        )
+
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 64
+            [message] => Call-time pass-by-reference has been removed
+            [file] => D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php
+            [line] => 62
+        )
+
+)
+
+
+
+[2015-04-07 17:13:11] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 64
+            [message] => Call-time pass-by-reference has been removed
+            [file] => D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php
+            [line] => 62
+        )
+
+)
+
+
+
+[2015-04-07 17:17:27] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 1
+            [message] => Class 'Core_Keys' not found
+            [file] => D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php
+            [line] => 55
+        )
+
+)
+
+
+
+[2015-04-07 17:18:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 1
+            [message] => Class 'Core_Keys' not found
+            [file] => D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php
+            [line] => 55
+        )
+
+)
+
+
+
+[2015-04-07 17:19:07] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => fatelerror
+    [1] => Array
+        (
+            [type] => 1
+            [message] => Access to undeclared static property: Core_Keys::$PREFIX
+            [file] => D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\config\core.keys.php
+            [line] => 17
+        )
+
+)
+
+
+

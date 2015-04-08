@@ -1,0 +1,1297 @@
+<?php die();?>
+[2015-04-07 09:48:05] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 09:48:05] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php:12
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:18
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php] 第 [12] 行 错误信息为: Undefined index: coremember 错误号为: [8]
+)
+
+
+
+[2015-04-07 09:48:05] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:51
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:32
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php] 第 [51] 行 错误信息为: Undefined index: mobile_member 错误号为: [8]
+)
+
+
+
+[2015-04-07 09:48:05] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php:14
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:276
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:32
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php] 第 [14] 行 错误信息为: Undefined index: dbmaster 错误号为: [8]
+)
+
+
+
+[2015-04-07 09:48:05] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:53
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:32
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:75
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:205
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:276
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:32
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [CAUGHT EXCEPTION] error occured in file [D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php] 第 [53] 行 错误信息为: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead 错误号为: [8192]
+)
+
+
+
+[2015-04-07 17:11:09] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:09] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: file 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:09] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: line 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:09] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:25
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [WARNING] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [25] 行 错误信息为: filesize(): stat failed for D:\php\wwwroot\yueai\yueai_android\application/yueai/androidzh/logs/fatelerror_2015-04-07.txt 错误号为: [2]
+)
+
+
+
+[2015-04-07 17:11:31] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:31] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: file 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:31] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: line 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: file 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: line 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: file 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: line 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: file 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:32] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: line 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:50] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:50] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:14
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php] 第 [14] 行 错误信息为: Undefined index: yueai 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:11:50] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:17
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php] 第 [17] 行 错误信息为: Undefined index: api 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:12:31] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:12:31] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:14
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php] 第 [14] 行 错误信息为: Undefined index: yueai 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:12:31] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:17
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php] 第 [17] 行 错误信息为: Undefined index: api 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:12:50] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:12:50] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php:12
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:26
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php] 第 [12] 行 错误信息为: Undefined index: coremember 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:12:50] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:51
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php] 第 [51] 行 错误信息为: Undefined index: mobile_member 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:12:50] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php:14
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php] 第 [14] 行 错误信息为: Undefined index: dbmaster 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:12:50] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:53
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:32
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:75
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:205
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:278
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [CAUGHT EXCEPTION] error occured in file [D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php] 第 [53] 行 错误信息为: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead 错误号为: [8192]
+)
+
+
+
+[2015-04-07 17:13:11] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:13:11] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: file 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:13:11] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: line 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:13:40] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:13:40] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php:12
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:26
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php] 第 [12] 行 错误信息为: Undefined index: coremember 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:13:40] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:51
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php] 第 [51] 行 错误信息为: Undefined index: mobile_member 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:13:40] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php:14
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php] 第 [14] 行 错误信息为: Undefined index: dbmaster 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:13:40] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:53
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:32
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:75
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:205
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:278
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [CAUGHT EXCEPTION] error occured in file [D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php] 第 [53] 行 错误信息为: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead 错误号为: [8192]
+)
+
+
+
+[2015-04-07 17:13:40] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php:14
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:48
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php] 第 [14] 行 错误信息为: Undefined index: members 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:14:29] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:14:29] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php:12
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:26
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php] 第 [12] 行 错误信息为: Undefined index: coremember 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:14:29] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:51
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php] 第 [51] 行 错误信息为: Undefined index: mobile_member 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:14:29] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php:14
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php] 第 [14] 行 错误信息为: Undefined index: dbmaster 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:14:29] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:53
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:32
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:75
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:205
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [CAUGHT EXCEPTION] error occured in file [D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php] 第 [53] 行 错误信息为: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead 错误号为: [8192]
+)
+
+
+
+[2015-04-07 17:14:29] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php:14
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:48
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php] 第 [14] 行 错误信息为: Undefined index: members 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php:12
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:26
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php] 第 [12] 行 错误信息为: Undefined index: coremember 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:51
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php] 第 [51] 行 错误信息为: Undefined index: mobile_member 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php:14
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php] 第 [14] 行 错误信息为: Undefined index: dbmaster 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:53
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:32
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:75
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:205
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [CAUGHT EXCEPTION] error occured in file [D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php] 第 [53] 行 错误信息为: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead 错误号为: [8192]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php:15
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:48
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php] 第 [15] 行 错误信息为: Undefined index: members 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php:12
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:26
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php] 第 [12] 行 错误信息为: Undefined index: coremember 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:51
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php] 第 [51] 行 错误信息为: Undefined index: mobile_member 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php:14
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php] 第 [14] 行 错误信息为: Undefined index: dbmaster 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:53
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:32
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:75
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:205
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [CAUGHT EXCEPTION] error occured in file [D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php] 第 [53] 行 错误信息为: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead 错误号为: [8192]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php:15
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:48
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php] 第 [15] 行 错误信息为: Undefined index: members 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php:12
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:26
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php] 第 [12] 行 错误信息为: Undefined index: coremember 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:51
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php] 第 [51] 行 错误信息为: Undefined index: mobile_member 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php:14
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php] 第 [14] 行 错误信息为: Undefined index: dbmaster 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:53
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:32
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:75
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:205
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [CAUGHT EXCEPTION] error occured in file [D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php] 第 [53] 行 错误信息为: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead 错误号为: [8192]
+)
+
+
+
+[2015-04-07 17:15:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php:15
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:48
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php] 第 [15] 行 错误信息为: Undefined index: members 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:17:27] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:17:27] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php:12
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:26
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php] 第 [12] 行 错误信息为: Undefined index: coremember 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:17:27] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:51
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php] 第 [51] 行 错误信息为: Undefined index: mobile_member 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:17:27] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php:14
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php] 第 [14] 行 错误信息为: Undefined index: dbmaster 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:17:27] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:53
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:32
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:75
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:205
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [CAUGHT EXCEPTION] error occured in file [D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php] 第 [53] 行 错误信息为: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead 错误号为: [8192]
+)
+
+
+
+[2015-04-07 17:17:27] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php:15
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:48
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php] 第 [15] 行 错误信息为: Undefined index: members 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:17:27] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: file 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:17:27] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: line 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:18:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:18:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php:12
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:26
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php] 第 [12] 行 错误信息为: Undefined index: coremember 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:18:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:51
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php] 第 [51] 行 错误信息为: Undefined index: mobile_member 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:18:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php:14
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php] 第 [14] 行 错误信息为: Undefined index: dbmaster 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:18:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:53
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:32
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:75
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:205
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [CAUGHT EXCEPTION] error occured in file [D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php] 第 [53] 行 错误信息为: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead 错误号为: [8192]
+)
+
+
+
+[2015-04-07 17:18:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php:15
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:48
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php] 第 [15] 行 错误信息为: Undefined index: members 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:18:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: file 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:18:20] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: line 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:07] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:07] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php:12
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:26
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php] 第 [12] 行 错误信息为: Undefined index: coremember 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:07] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:51
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php] 第 [51] 行 错误信息为: Undefined index: mobile_member 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:07] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php:14
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php] 第 [14] 行 错误信息为: Undefined index: dbmaster 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:07] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:53
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:32
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:75
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:205
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [CAUGHT EXCEPTION] error occured in file [D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php] 第 [53] 行 错误信息为: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead 错误号为: [8192]
+)
+
+
+
+[2015-04-07 17:19:07] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php:15
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:48
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php] 第 [15] 行 错误信息为: Undefined index: members 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:07] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: file 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:07] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php:21
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:98
+:
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\logs.php] 第 [21] 行 错误信息为: Undefined index: line 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:43] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\index.php:42
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\index.php] 第 [42] 行 错误信息为: Undefined index: m 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:43] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php:12
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:26
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\module\core.member.php] 第 [12] 行 错误信息为: Undefined index: coremember 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:43] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:51
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php] 第 [51] 行 错误信息为: Undefined index: mobile_member 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:43] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php:14
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.mysql.php] 第 [14] 行 错误信息为: Undefined index: dbmaster 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:43] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+:
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:53
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:32
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:75
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php:205
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:277
+D:\php\wwwroot\yueai\yueai_android\module\yueai\mobile.member.php:215
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:40
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [CAUGHT EXCEPTION] error occured in file [D:\php\wwwroot\yueai\yueai_android\system\lib\lib.mysql.php] 第 [53] 行 错误信息为: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead 错误号为: [8192]
+)
+
+
+
+[2015-04-07 17:19:43] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php:15
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:48
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php] 第 [15] 行 错误信息为: Undefined index: members 错误号为: [8]
+)
+
+
+
+[2015-04-07 17:19:43] 
+D:\php\wwwroot\yueai\yueai_android\system\lib\lib.yueai.php:84
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.memcached.php:25
+D:\php\wwwroot\yueai\yueai_android\module\yueai\member.php:57
+D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\core\androidGuest.php:48
+D:\php\wwwroot\yueai\yueai_android\application\index.php:62
+Array
+(
+    [0] => appRrror
+    [1] => [NOTICE] error occured in file [D:\php\wwwroot\yueai\yueai_android\application\yueai\androidzh\loader\loader.memcached.php] 第 [25] 行 错误信息为: Undefined index: stocache 错误号为: [8]
+)
+
+
+

@@ -1,12 +1,4 @@
-<?php
-/**
- * 此类为用户相关配置
-**/
-defined('YUEAI') or exit('Access Denied！');
-
-class Core_User {
-	
-	//星座
+//星座
 	private static $star = array(
 							0	=>	'保密',
 							1	=>	'白羊座',
@@ -132,55 +124,3 @@ class Core_User {
 							33	=>	'香港特别行政区',
 							34	=>	'澳门特别行政区',
 	);
-	//通过公共函数返回上面用户相关信息资料
-	public static function getUserOtherInfo($type=0){
-		$info = $return = array();
-		$info['star'] = self::$star;
-		$info['blood'] = self::$blood;
-		$info['perfession'] = self::$perfession;
-		$info['money'] = self::$money;
-		$info['part'] = self::$part;
-		$info['marry'] = self::$marry;
-		$info['interest'] = self::$interest;
-		$info['style'] = self::$style;
-		$info['province'] = self::$province;
-		
-		switch($type){
-			case "1":
-				$return = $info['star'];
-				break;
-			case "2":
-				$return = $info['blood'];
-				break;
-			case "3":
-				$return = $info['perfession'];
-				break;
-			case "4":
-				$return = $info['money'];
-				break;
-			case "5":
-				$return = $info['part'];
-				break;
-			case "6":
-				$return = $info['marry'];
-				break;
-			case "7":
-				$return = $info['interest'];
-				break;
-			case "8":
-				$return = $info['style'];
-				break;
-			case "9":
-				$return = $info['province'];
-				break;
-			default:
-				$return = $info;
-				break;
-			
-		}
-		
-		return $return;
-		
-	}
-}
-?>

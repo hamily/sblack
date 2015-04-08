@@ -233,6 +233,7 @@ class Mobile_Member extends Core_Table {
 			$crcdevice = sprintf('%u',crc32($deviceno));
 			$crcmac = sprintf('%u',crc32($macid));
 			$sql = "INSERT INTO {$this->guestandroid} SET sitemid='{$sitemid}', deviceno='{$deviceno}',mac='{$macid}',crcdev={$crcdevice},crcmac={$crcmac}";
+			echo $sql;
 			Loader_Mysql::dbmaster()->query($sql);
 			$flag = (int)Loader_Mysql::dbmaster()->affectedRows();
 		

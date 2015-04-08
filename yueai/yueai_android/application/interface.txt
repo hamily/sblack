@@ -1,5 +1,5 @@
 一，AS与PHP通信公共参数
-web url
+接口 http://121.40.118.22/yueai_android/application/
 参数：
 api={"api":1,"sid":1,"deviceno":"25cc5eec303fb803370716900d3443cc","username":"user0","mac":"xxx","uid":0,"version":"1.0.0","param":{"imei":"6fbbfd045ce44f13874ecb499d218455"},"sign":"04b29480233f4def5c875875b6bdc3b1","time":1426755868}
 
@@ -20,3 +20,55 @@ api={"api":1,"sid":1,"deviceno":"25cc5eec303fb803370716900d3443cc","username":"u
 	md5(api + sid + version + deviceno + time + secretkey)
 	
 二 登录接口
+	m=core&p=androidGuest&api={}
+	
+	返回：
+	{"flag":1,"time":"2015-04-08","success":{"mid":1,"sitemid":"1","sid":1,"mnick":"user0","sex":2,"locate":0,"birth":0,"star":0,"weight":52,"blood":0,"perfession":0,"house":0,"car":0,"marry":0,"money":0,"bsex":0,"bother":0,"bstay":0,"bchild":1,"interst":0,"part":0,"status":0,"mactivetime":1428476770,"mtime":1428403383,"mentercount":1,"icon":"http:\/\/121.40.118.22\/usericon\/1\/1_icon.jpg?v=942879","middle":"http:\/\/121.40.118.22\/usericon\/1\/1_middle.jpg?v=942879","big":"http:\/\/121.40.118.22\/usericon\/1\/1_big.jpg?v=942879","firstLogin":0,"isRegister":0,"sigRequest":"ijBTM3pvJ3rIhuen1uTasD7PhitBOGNb_o8949aoPNGEsWjScWTisCa-zEpbok9jKtiGO3ih5FxbIwJhfqz3xw=="}}
+	
+	其中一些参数返回说明：
+		firstLogin:1 为今天首次登录 0 不是
+		isRegister:1  为注册用户
+		sigRequest:xxx  加密串 其它接口使用
+		icon:
+		middle:
+		big: 为用户小，中，大头像 
+	
+	
+三 头像上传
+	m=icon&p=index&sigRequest=xxxxx
+	其中sigRequest为登录返回时userinfo里的sigRequest
+	
+	POST参数为 $_FILES
+	
+	返回：
+	{"flag":1,"time":"2015-04-08","success":{"flag":1,"info":{"icon":"http:\/\/121.40.118.22\/usericon\/1\/11428479663_icon.jpg?v=1428479663","middle":"http:\/\/121.40.118.22\/usericon\/1\/11428479663_middle.jpg?v=1428479663","big":"http:\/\/121.40.118.22\/usericon\/1\/11428479663_big.jpg?v=1428479663"}}}
+	
+四 修改用户资料
+	m=core&p=updateinfo&sigRequest=xxxx&fields={}
+	
+	其中fields为json格式：修改字段的key=>value形式
+	约定：
+	KEY					Value
+	mnick:	昵称		见文档
+	sex:    性别
+	blood:  血型
+	mobile: 电话
+	qq:		qq号
+	star:	星座
+	perfession: 职业
+	money: 收入
+	part: 魅力部位
+	marry: 是否结婚
+	interest:兴趣爱好
+	style:个人特点
+	province:省份
+	
+	具体上面对应的值见下面userconfig.txt文档  这个最好做成配置，方便以后添加各种选项
+	返回:
+	
+	
+	
+	
+
+	
+	

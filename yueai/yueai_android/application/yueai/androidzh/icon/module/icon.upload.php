@@ -1,8 +1,10 @@
 <?php
 defined('YUEAI') or exit( 'Access Denied！');
+/*
 define('CDN_IMG_URL','https://fbpoker.boyaagame.com/fb/kingslave/images/head/');
 define('CDN_IMG_PATH','/disk1/wwwroot/static/facebook/fb/kingslave/images/head/');
 define('CDN_POST_URL','http://208.43.166.73/fb/kingslave/iconuploadcdn.php');
+*/
 class icon_upload {
 	public $imgType = array("jpg","jpeg","png","gif");	//允許上傳的圖片類型
 	public $size = 2097152;								//允許上傳圖片大小 1024 * 1024 * 2 2 M
@@ -23,8 +25,8 @@ class icon_upload {
 	 * 构造函数
 	 */
 	public function __construct() {
-		$this->uploadPath = "/data/wwwroot/usericon/";
-		$this->domainUrl = "http://kingslave.boyaagame.com/usericon/";
+		$this->uploadPath = "/alidata/www/default/usericon";
+		$this->domainUrl = Core_System::$appUrl . "usericon/";
 	}
 	/**
 	 * 判断上传文件类型
@@ -49,32 +51,32 @@ class icon_upload {
 	public function upload($mid,$files) { 
 		//判斷用戶
 		if(! ( $mid = Helper::uint( $mid)) || empty($files)){
-			return array("flag"=>0,"msg"=>"CODE ผิดพลาด");
+			return array("flag"=>0,"msg"=>Core_Error::getError(-1));
 		}
 		//判斷圖片類型
 		$ext = strtolower(trim(substr(strrchr($files["icon"]["name"], '.'), 1)));
 		if(!$this->checkext($ext)){
-			return array("flag"=>0,"msg"=>"ไฟล์ที่สกุลโหลดไม่ถูกต้อง");
+			return array("flag"=>0,"msg"=>Core_Error::getError(-5));
 		}
 		//判斷大小
 		$size = Helper::uint( $files['icon']['size']);
 		if(!$this->checksize( $size)){
-			return array("flag"=>0,"msg"=>"ไฟล์ที่โหลดมีขนาดได้ไม่เกิน 2M");
+			return array("flag"=>0,"msg"=>Core_Error::getError(-6));
 		}
 		//按用戶mid分子目錄
 		$subname = $mid % 100;
 
 		if(!is_dir($this->uploadPath)) mkdir($this->uploadPath);
-		if(!is_dir($this->uploadPath . $subname . '/')) mkdir($this->uploadPath . $subname  . '/');
+		if(!is_dir($this->uploadPath . "/" . $subname . '/')) mkdir($this->uploadPath . "/" . $subname  . '/');
 		
-		$new_name = $this->uploadPath . $subname  . '/' . $mid . '.jpg';
+		$new_name = $this->uploadPath . "/" . $subname  . '/' . $mid . '.jpg';
 		$tmp_name = $files["icon"]["tmp_name"];
 		if(@copy($tmp_name, $new_name)) {
 			@unlink($tmp_name);
 		} elseif((function_exists('move_uploaded_file') && @move_uploaded_file($tmp_name, $new_name))) {
 		} elseif(@rename($tmp_name, $new_name)) {
 		} else {
-			return array("flag"=>0,"msg"=>"การโหลดรูปภาพล้มเหลว");
+			return array("flag"=>0,"msg"=>Core_Error::getError(-7));
 		}
 		$timebefore = $this->setIconTime($mid,0);
 		$icon_before_image = $mid . $timebefore . "_icon.jpg";
@@ -88,15 +90,15 @@ class icon_upload {
 		
 		//製作縮略圖
 		$time = time();
-		$icon_image = $mid . $time . "_icon.jpg";
-		$middle_image = $mid . $time . "_middle.jpg";
-		$big_image = $mid . $time. "_big.jpg";		
+		$icon_image = $mid . "_icon.jpg";
+		$middle_image = $mid . "_middle.jpg";
+		$big_image = $mid . "_big.jpg";		
 		$big_new_image = $this->uploadPath . $subname  . '/' . $middle_image;
 		$icon_new_image = $this->uploadPath . $subname  . '/' . $icon_image;
 		
-		$this->makethumb( $this->uploadPath . $subname  . '/' . $mid . '.jpg', 30, 30, $this->uploadPath . $subname  . '/' .$icon_image );
-		$this->makethumb( $this->uploadPath . $subname  . '/' . $mid . '.jpg', 50, 50, $this->uploadPath . $subname  . '/' . $middle_image );
-		$this->makethumb( $this->uploadPath . $subname  . '/' . $mid . '.jpg', 100, 100, $this->uploadPath . $subname  . '/' . $big_image );
+		$this->makethumb( $this->uploadPath . '/' . $subname  . '/' . $mid . '.jpg', 30, 30, $this->uploadPath . "/" . $subname  . '/' .$icon_image );
+		$this->makethumb( $this->uploadPath . '/' . $subname  . '/' . $mid . '.jpg', 50, 50, $this->uploadPath . "/" . $subname  . '/' . $middle_image );
+		$this->makethumb( $this->uploadPath . '/' . $subname  . '/' . $mid . '.jpg', 100, 100, $this->uploadPath . "/" . $subname  . '/' . $big_image );
 		
 		//$time = time();
 		$info['icon'] = $this->domainUrl . $subname . '/' . $icon_image . '?v=' . $time;
@@ -105,14 +107,14 @@ class icon_upload {
 		
 		$this->setIconTime($mid,1,$time);
 		
+		/*
 		$cmd = "chmod -R 775 " . $this->uploadPath . $subname;
 		exec($cmd,$text);
 		//同步上传头像到CDN
-		if($mid==22){
-			//$ret = $this->CurlImg($mid,$big_new_image,$icon_new_image);
-			//echo $ret;	
-		}		
-		
+		$ret = $this->CurlImg($mid,$big_new_image,$icon_new_image);
+		echo $ret;	
+			
+		*/
 		return array("flag"=>1,'info'=>$info);
 	}
 	/**
@@ -273,17 +275,16 @@ class icon_upload {
 			return false;
 		}
 		$cachekey = Icon_Keys::mkmbicontime($mid);
-		$expire = time() + 5184000;
 		if($type==0){
-			$time = (int)Loader_Memcached::minfo($mid)->get($cachekey);
-			if(empty($time)){
-				$time = (int)Loader_Redis::redistask()->get($cachekey,false,false);
+			$time = (int)Loader_Redis::redistask()->get($cachekey,false,false);
+			if($time==0){
+				$time = mt_rand(1,999999);
+				Loader_Redis::redistask()->set($cachekey,$time,false,false,90*24*3600);
 			}
 			return $time;
 		}else{ 
-			//要永久存 加一层存储
-			Loader_Redis::redistask()->set($cachekey,$time,false,false);
-			return Loader_Memcached::minfo($mid)->set($cachekey,$time,$expire);
+			//存三个月
+			return Loader_Redis::redistask()->set($cachekey,$time,false,false,90*24*3600);
 		}
 	}
 }

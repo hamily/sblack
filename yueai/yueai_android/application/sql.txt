@@ -1,0 +1,12 @@
+CREATE TABLE `membertable` (
+ `mid` int(10) unsigned NOT NULL default '0' COMMENT '用户mid',
+ `mtkey` char(32) NOT NULL COMMENT '登录mtkey',
+ `tid` int(10) unsigned NOT NULL default '0' COMMENT 'tid',
+ `svid` int(10) unsigned NOT NULL default '0' COMMENT 'svid',
+ `mtstatus` tinyint(3) unsigned NOT NULL COMMENT '0 APP中,1聊天中',
+ `mttime` int(10) unsigned NOT NULL default '0' COMMENT '最后更新时间',
+ UNIQUE KEY `idx_mid` (`mid`),
+ KEY `idx_rid` (`tid`),
+ KEY `mttime` (`mttime`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户登陆后用户与房间的对应表'
+

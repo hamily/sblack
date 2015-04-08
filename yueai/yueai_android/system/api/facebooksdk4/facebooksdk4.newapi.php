@@ -3,7 +3,7 @@ defined('BOYAA') or exit('Access Denied！');
 /**
 * Name: Facebook Login Library
 *
-* Author: dulu 
+* Author:  
 */
 use Facebook\FacebookRedirectLoginHelper;
 use Facebook\FacebookSession;
@@ -33,7 +33,7 @@ class Facebooksdk4_NewApi
     /**
      * 创建一个实例
      *
-     * @author dulu
+     * @author 
      *
      * @return object Facebookv4_NewApi
      */
@@ -53,7 +53,7 @@ class Facebooksdk4_NewApi
     /**
      * 初始化游戏平台相关信息
      *
-     * @author dulu
+     * @author 
      *
      * @return object Facebookv4_NewApi
      */  
@@ -77,7 +77,7 @@ class Facebooksdk4_NewApi
     /**
      * 获取用户ID
      *
-     * @author dulu
+     * @author 
      * @modify by wyj 2014-12-30
      * @return [string_type] 平台ID 
      */
@@ -99,7 +99,7 @@ class Facebooksdk4_NewApi
     /**
      * [resetLogin 令牌过期,重新登录,生成令牌]
      *
-     * @author dulu
+     * @author 
      * 
      * @return [void] 获得access_token信息
      */
@@ -128,7 +128,7 @@ class Facebooksdk4_NewApi
     /**
      * [toAuth 显示授权页面授权]
      * 
-     * @author dulu
+     * @author 
      *
      * @param [array_type] 
      * 
@@ -174,7 +174,7 @@ class Facebooksdk4_NewApi
     /**
      * [getMe 获取用户信息]
      * 
-     * @author dulu
+     * @author 
      * 
      * @return [array] [用户平台信息]
      */
@@ -214,7 +214,7 @@ class Facebooksdk4_NewApi
     /**
      * 获取非游戏好友列表
      *
-     * @author dulu
+     * @author 
      *
      * @return array
      */
@@ -263,7 +263,7 @@ class Facebooksdk4_NewApi
     /**
      * 获取游戏好友列表
      *
-     * @author dulu
+     * @author 
      *
      * @return array
      */
@@ -311,7 +311,7 @@ class Facebooksdk4_NewApi
     /**
      * 获取所有好友列表
      *
-     * @author dulu
+     * @author 
      *
      * @return array
      */
@@ -360,7 +360,7 @@ class Facebooksdk4_NewApi
     /**
      * [getUserPerms 获取用户授权信息]
      *
-     * @author dulu
+     * @author 
      *
      * @return [type]      [description]
      */
@@ -399,7 +399,7 @@ class Facebooksdk4_NewApi
      * @from  https://developers.facebook.com/docs/games/notifications/ 官方文档
      * https://developers.facebook.com/docs/graph-api/reference/v2.2/user/notifications?locale=zh_CN
      *
-     * @author dulu
+     * @author 
      * 
      * @param array $uid FB用户ID集合
      * @param string $content 内容
@@ -490,7 +490,7 @@ class Facebooksdk4_NewApi
   /**
    * 判断用户是否某个页面的like
    *
-   * @author dulu
+   * @author 
    *
    * @param string_type $uid     平台ID
    * @param string_type $pageId  页面ID
@@ -526,7 +526,7 @@ class Facebooksdk4_NewApi
   /**
    * 获得用户本地化货币设置币种
    * 
-   * @author dulu
+   * @author 
    *
    * @return string_type $local 本地币种
   **/
@@ -559,7 +559,7 @@ class Facebooksdk4_NewApi
   /**
    * 上传一张图片(URL)
    *
-   * @author dulu
+   * @author 
    * 
    * @param string $file          图片在服务器的文件绝对地址
    * @param string $picMessage    图片的说明
@@ -597,7 +597,7 @@ class Facebooksdk4_NewApi
   /**
    * 上传一张图片(Source)
    *
-   * @author dulu
+   * @author 
    * 
    * @param string $file 获取通过文件上传照片multipart/form-data数据然后使用源参数
    * @param string $message 照片的说明
@@ -635,7 +635,7 @@ class Facebooksdk4_NewApi
   /**
    * 创建一个指定名称的相册, 如果存在就直接返回相簿ID
    *
-   * @author dulu
+   * @author 
    * 
    * @param string $name 相册名称
    * @param string $message 相册说明
@@ -693,7 +693,7 @@ class Facebooksdk4_NewApi
   /**
    * [getAlbum 获得用户所有相簿信息]
    *
-   * @author dulu
+   * @author 
    * 
    * @return [array] [相簿信息(名称，ID)]
    */
