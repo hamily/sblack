@@ -17,17 +17,17 @@ api={"api":1,"sid":1,"deviceno":"25cc5eec303fb803370716900d3443cc","username":"u
 	time:请求时间
 	
 	其中sign验证规则：
-	md5(api + sid + version + deviceno + time + secretkey)
+	md5(api + sid + version + deviceno + time + secretkey)  其中secretkey:yueaitogether
 	
 二 登录接口
 	m=core&p=androidGuest&api={}
 	
 	返回：
-	{"flag":1,"time":"2015-04-08","success":{"mid":1,"sitemid":"1","sid":1,"mnick":"user0","sex":2,"locate":0,"birth":0,"star":0,"weight":52,"blood":0,"perfession":0,"house":0,"car":0,"marry":0,"money":0,"bsex":0,"bother":0,"bstay":0,"bchild":1,"interst":0,"part":0,"status":0,"mactivetime":1428476770,"mtime":1428403383,"mentercount":1,"icon":"http:\/\/121.40.118.22\/usericon\/1\/1_icon.jpg?v=942879","middle":"http:\/\/121.40.118.22\/usericon\/1\/1_middle.jpg?v=942879","big":"http:\/\/121.40.118.22\/usericon\/1\/1_big.jpg?v=942879","firstLogin":0,"isRegister":0,"sigRequest":"ijBTM3pvJ3rIhuen1uTasD7PhitBOGNb_o8949aoPNGEsWjScWTisCa-zEpbok9jKtiGO3ih5FxbIwJhfqz3xw=="}}
+	{"flag":1,"time":"2015-04-15","success":{"mid":"1","sitemid":"1","sid":"1","mnick":"sblack","sex":"0","locate":"0","birth":"","star":"\u4fdd\u5bc6","weight":"1","blood":"\u4fdd\u5bc6","perfession":"\u4fdd\u5bc6","house":"0","car":"0","marry":"\u4fdd\u5bc6","money":"\u4fdd\u5bc6","bsex":"0","bother":"0","bstay":"0","bchild":"0","interst":"0","part":"\u4fdd\u5bc6","status":"0","mactivetime":1429059520,"mtime":"0","mentercount":3,"icon":"http:\/\/121.40.118.22\/usericon\/1\/1_icon.jpg?v=1428488687","middle":"http:\/\/121.40.118.22\/usericon\/1\/1_middle.jpg?v=1428488687","big":"http:\/\/121.40.118.22\/usericon\/1\/1_big.jpg?v=1428488687","firstLogin":0,"isRegister":0,"interest":"\u4fdd\u5bc6","style":"\u4fdd\u5bc6","province":"\u4fdd\u5bc6","sigRequest":"pMDiJZFrNw0b300OJ04eodmob7kA6jNS6JhamLmBoCh0ZVw_Yfp5bOYbMZ8AstTkOvb7TbJZWI_W-g9iJ8VKBw=="}}
 	
 	其中一些参数返回说明：
 		firstLogin:1 为今天首次登录 0 不是
-		isRegister:1  为注册用户
+		isRegister:1  为新注册用户
 		sigRequest:xxx  加密串 其它接口使用
 		icon:
 		middle:

@@ -36,7 +36,7 @@ class Core_User {
 	private static $perfession = array(
 							0	=>	'保密',
 							1	=>	'上班族',
-							2	=>	'私营老板'
+							2	=>	'私营老板',
 							3	=>	'公务员',
 	);
 	
