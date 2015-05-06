@@ -33,6 +33,9 @@ class Core_Member extends Core_Table{
 			Member::factory()->setOnline( $aUser);
 		}
 		
+		$aUser['gztime'] = Core_System::$gztime;
+		$aUser['gzfile'] = Core_System::$gzfile;
+		
 		$aUser['sigRequest'] = Logs::encrypt(json_encode(array("mid"=>$aUser['mid'],"sitemid"=>$aUser['sitemid'],"api"=>$api,"sid"=>$aUser['sid'],'version'=>$version)));
 		
 		return (array)$aUser;

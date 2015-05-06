@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content>
+	<!--大类-->
+	<items>
+		<item name="星座" value="1"></item>
+		<item name="血型" value="2"></item>
+		<item name="职业" value="3"></item>
+		<item name="星座" value="4"></item>
+	</items>
+	<!--星座-->
+	<star>
+		<item name="保密" value="0"></item>
+		<item name="白羊座" value="1"></item>
+		<item name="金牛座" value="2"></item>
+		<item name="双子座" value="3"></item>
+		<item name="巨蟹座" value="4"></item>
+		<item name="狮子座" value="5"></item>
+		<item name="处女座" value="6"></item>
+		<item name="天秤座" value="7"></item>
+		<item name="天蝎座" value="8"></item>
+		<item name="射手座" value="9"></item>
+		<item name="摩羯座" value="10"></item>
+		<item name="水瓶座" value="11"></item>
+		<item name="双鱼座" value="12"></item>
+	</star>
+	<!--血型-->
+	<blood>
+		<item name="保密" value="0"></item>
+		<item name="A型" value="1"></item>
+		<item name="B型" value="2"></item>
+		<item name="AB型" value="3"></item>
+		<item name="O型" value="4"></item>
+	</blood>
+	<!--职业-->
+	<perfession>
+		<item name="保密" value="0"></item>
+		<item name="大校学生" value="1"></item>
+		<item name="军人" value="2"></item>
+		<item name="私人业主" value="3"></item>
+		<item name="企业职工" value="4"></item>
+		<item name="农业劳动者" value="5"></item>
+		<item name="公务员" value="6"></item>
+		<item name="自由职业" value="7"></item>
+	</perfession>
+	<!--收入-->
+	<money>
+		<item name="保密" value="0"></item>
+		<item name="2000以下" value="1"></item>
+		<item name="2000-5000" value="2"></item>
+		<item name="5000-10000" value="3"></item>
+		<item name="10000-20000" value="4"></item>
+		<item name="20000以上" value="5"></item>
+	</money>
+	<!--魅力部位-->
+	<part>
+		<item name="保密" value="0"></item>
+		<item name="笑容" value="1"></item>
+		<item name="眉毛" value="2"></item>
+		<item name="眼睛" value="3"></item>
+		<item name="头发" value="4"></item>
+		<item name="鼻子" value="5"></item>
+		<item name="嘴唇" value="6"></item>
+		<item name="牙齿" value="7"></item>
+		<item name="颈部" value="8"></item>
+		<item name="耳朵" value="9"></item>
+		<item name="手" value="10"></item>
+		<item name="胸部" value="11"></item>
+		<item name="腰部" value="12"></item>
+		<item name="脚" value="13"></item>
+		<item name="腿部" value="14"></item>
+		<item name="臀部" value="15"></item>
+		<item name="头发" value="16"></item>
+	</part>
+	<!--婚姻-->
+	<marry>
+		<item name="保密" value="0"></item>
+		<item name="未婚" value="1"></item>
+		<item name="离异" value="2"></item>
+		<item name="丧偶" value="3"></item>
+	</marry>
+	<!--兴趣爱好-->
+	<interest>
+		<item name="保密" value="0"></item>
+		<item name="运动健身" value="1"></item>
+		<item name="烹饪料理" value="2"></item>
+		<item name="读书绘画" value="3"></item>
+		<item name="影视音乐" value="4"></item>
+		<item name="上网" value="5"></item>
+		<item name="养小动物" value="6"></item>
+		<item name="摄影" value="7"></item>
+		<item name="旅游" value="8"></item>
+		<item name="园艺花卉" value="9"></item>
+		<item name="跳舞" value="10"></item>
+		<item name="购物" value="11"></item>
+		<item name="电子产品" value="12"></item>
+		<item name="汽车军工" value="13"></item>
+		<item name="玩游戏" value="14"></item>
+	</interest>
+	<!--个人类型-->
+	<interest>
+		<item name="保密" value="0"></item>
+		<item name="好强" value="1"></item>
+		<item name="冷静" value="2"></item>
+		<item name="温柔" value="3"></item>
+		<item name="孝顺" value="4"></item>
+		<item name="闷骚" value="5"></item>
+		<item name="正直" value="6"></item>
+		<item name="宅" value="7"></item>
+		<item name="讲义气" value="8"></item>
+		<item name="自我" value="9"></item>
+		<item name="勇敢" value="10"></item>
+		<item name="有责任心" value="11"></item>
+		<item name="活泼" value="12"></item>
+		<item name="随和" value="13"></item>
+		<item name="理智" value="14"></item>
+		<item name="强势" value="15"></item>
+		<item name="可爱" value="16"></item>
+	</interest>
+	<!--省市-->
+	<province>
+		<item name="保密" value="0"></item>
+		<item name="北京市" value="1"></item>
+		<item name="天津市" value="2"></item>
+		<item name="上海市" value="3"></item>
+		<item name="重庆市" value="4"></item>
+		<item name="河北省" value="5"></item>
+		<item name="河南省" value="6"></item>
+		<item name="云南省" value="7"></item>
+		<item name="辽宁省" value="8"></item>
+		<item name="黑龙江省" value="9"></item>
+		<item name="湖南省" value="10"></item>
+		<item name="安徽省" value="11"></item>
+		<item name="山东省" value="12"></item>
+		<item name="新疆维吾尔" value="13"></item>
+		<item name="江苏省" value="14"></item>
+		<item name="浙江省" value="15"></item>
+		<item name="江西省" value="16"></item>
+		<item name="湖北省" value="17"></item>
+		<item name="广西壮族" value="18"></item>
+		<item name="甘肃省" value="19"></item>
+		<item name="山西省" value="20"></item>
+		<item name="内蒙古" value="21"></item>
+		<item name="陕西省" value="22"></item>
+		<item name="吉林省" value="23"></item>
+		<item name="福建省" value="24"></item>
+		<item name="贵州省" value="25"></item>
+		<item name="广东省" value="26"></item>
+		<item name="青海省" value="27"></item>
+		<item name="西藏" value="28"></item>
+		<item name="四川省" value="29"></item>
+		<item name="宁夏回族" value="30"></item>
+		<item name="海南省" value="31"></item>
+		<item name="台湾省" value="32"></item>
+		<item name="香港特别行政区" value="33"></item>
+		<item name="澳门特别行政区" value="34"></item>
+	</province>
+	<!--异地峦-->
+	<difflove>
+		<item name="保密" value="0"></item>
+		<item name="能" value="1"></item>
+		<item name="不能" value="2"></item>
+		<item name="看情况" value="3"></item>
+	</difflove>
+	<!--children-->
+	<children>
+		<item name="保密" value="0"></item>
+		<item name="要" value="1"></item>
+		<item name="不想要" value="2"></item>
+		<item name="还没想好" value="3"></item>
+	</children>
+	<!--house-->
+	<hourse>
+		<item name="保密" value="0"></item>
+		<item name="已购房" value="1"></item>
+		<item name="与父母同住" value="2"></item>
+		<item name="租房" value="3"></item>
+		<item name="其它" value="4"></item>
+	</hourse>
+	<!--car-->
+	<hourse>
+		<item name="保密" value="0"></item>
+		<item name="有车" value="1"></item>
+		<item name="没车" value="2"></item>
+	</hourse>
+	<!--sex-->
+	<hourse>
+		<item name="保密" value="0"></item>
+		<item name="能" value="1"></item>
+		<item name="不能" value="2"></item>
+		<item name="看情况" value="3"></item>
+	</hourse>
+	<!--live与父母同住-->
+	<hourse>
+		<item name="保密" value="0"></item>
+		<item name="愿意" value="1"></item>
+		<item name="不愿意" value="2"></item>
+		<item name="看情况" value="3"></item>
+	</hourse>
+</content>

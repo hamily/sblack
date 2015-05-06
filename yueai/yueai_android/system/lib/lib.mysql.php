@@ -270,9 +270,12 @@ class Lib_Mysql
     }
     
     private function errorlog( $msg='' ){
-        $error = date('Y-m-d H:i:s').":\n".$this->errorno() . ":\nmsg:".$this->error() . $msg . ";\n";
-        $file = APP_LOG_PATH . 'sql/mysql.txt';
+        $error = date('Y-m-d H:i:s').":\n".$this->errorno() . ":\nmsg:".$this->error() . $msg . ";\n"; 
+        Logs::debug('mysql.txt',$error);
+		/*
+		$file = APP_LOG_PATH . 'sql/mysql.txt';
         file_put_contents($file, "{$error}\n", @filesize($file)<1024*1024 ? FILE_APPEND : null);
+		*/
         die('DB Invalid!!!');
     }
     
